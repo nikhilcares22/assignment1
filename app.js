@@ -30,9 +30,6 @@ app.use((req, res, next) => {
 });
 
 //routes which should handle requests
-// app.use('/products', productRoutes);
-// app.use('/orders', orderRoutes);
-// app.use('/user', userRoutes);
 app.use('/csv', csvRoutes );
 app.use('/data', dataRoutes );
 
@@ -60,3 +57,5 @@ server.listen(port, async () => {
 
 
 module.exports = app;
+
+//postman collection   https://www.getpostman.com/collections/3bd99f0d9c1da8b11852
