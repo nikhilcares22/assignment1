@@ -175,7 +175,7 @@ exports.exportNewData = async (req, res) => {
 				},
 			},
 		]);
-		let path = `${process.env.PWD}/uploads/out.csv`;
+		let path = `${process.env.PWD}/api/uploads/out.csv`;
 		await writeUtil.writeCSVFromJson(jsonData, path, [
 			"publishedAt",
 			"title",
