@@ -7,9 +7,8 @@ exports.predictMoves = async (req, res) => {
         let pos = req.body.pos;
         let m = 8;
         let n = 8;
-		// function predictMoves(pos, m, n) {
-		//where m and n represent the length in x and y axis resp.
-		if (!pos.hasOwnProperty("x") || !pos.hasOwnProperty("y"))
+
+        if (!pos.hasOwnProperty("x") || !pos.hasOwnProperty("y"))
 			throw new Error ("Invalid input, input must be in {x:0,y:0} form.");
 		let X = pos.x;
 		let Y = pos.y;
@@ -21,7 +20,6 @@ exports.predictMoves = async (req, res) => {
 				result.push({ x: a, y: b });
 			}
 		}
-		// }
 
 		return res.status(200).json({
 			message: "Successfull.",
