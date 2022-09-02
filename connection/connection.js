@@ -3,7 +3,7 @@ global.ObjectId = mongoose.Types.ObjectId;
 
 module.exports.mongodb = async () => {
 	await mongoose.connect(
-		process.env.MONGO_URL||"mongodb://localhost:27017/csvService",
+		'mongodb+srv://nikhil:FMR4YFUQDYYEqNTf@cluster0.udzon.mongodb.net/?retryWrites=true&w=majority'||"mongodb://localhost:27017/csvService",
 		{
 			useUnifiedTopology: true,
 			useFindAndModify: false,

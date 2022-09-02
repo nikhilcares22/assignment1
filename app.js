@@ -50,7 +50,7 @@ app.use((error, req, res, next) => {
 })
 
 
-server.listen(port, async () => {
+server.listen(process.env.PORT||port, async () => {
     console.log(`Running on:`, port);
     connection.mongodb();
 });
