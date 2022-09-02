@@ -5,6 +5,8 @@ exports.predictMoves = async (req, res) => {
 		let x = [2, 2, 1, 1, -2, -2, -1, -1]; //possible moves
 		let y = [1, -1, 2, -2, 1, -1, 2, -2]; //possible moves
         let pos = req.body.pos;
+        let m = 8;
+        let n = 8;
 		// function predictMoves(pos, m, n) {
 		//where m and n represent the length in x and y axis resp.
 		if (!pos.hasOwnProperty("x") || !pos.hasOwnProperty("y"))
