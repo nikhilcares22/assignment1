@@ -7,9 +7,7 @@ const connection = require('./connection/connection');
 const port =  3000;
 
 
-// const productRoutes = require('./api/routes/products');
-// const orderRoutes = require('./api/routes/orders');
-// const userRoutes = require('./api/routes/user');
+const knightRoutes = require('./api/routes/knight.js');
 const csvRoutes = require('./api/routes/csv.js');
 const dataRoutes = require('./api/routes/data');
 
@@ -30,6 +28,7 @@ app.use((req, res, next) => {
 });
 
 //routes which should handle requests
+app.use('/knight', knightRoutes );
 app.use('/csv', csvRoutes );
 app.use('/data', dataRoutes );
 
